@@ -2452,7 +2452,7 @@
         "ai_gen_block_324eef5_QY6Udr"
       ],
       "custom_css": [
-        ".ai-icon-columns-acuczrwkzyktieu5icaigenblock324eef5qy6udr {background: #fdf7eb;}"
+        ":where([class*=\"ai-icon-columns-\"])[class*=\"aigenblock324eef5qy6udr\"] {background: #fdf7eb;}"
       ],
       "settings": {}
     },

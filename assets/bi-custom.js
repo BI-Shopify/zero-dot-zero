@@ -1212,9 +1212,12 @@
        express order, full width, masonry, right sidebar, banner adv) tag their wrapper
        with data-section-type="collection", so that one hook covers whichever layout the
        theme setting selects. The #shopify-section- ids below are only a safety net for a
-       template whose product-grid section is keyed differently. */
+       template whose product-grid section is keyed differently. A brand page may put a
+       title above the listing (custom-brand-listing-heading); when it does, land on that
+       so the title is not scrolled past. */
     if (token === 'products') {
       candidates = [
+        '[data-listing-heading]',
         '[data-section-type="collection"]',
         '#shopify-section-product-grid',
         '#shopify-section-main-collection-product-grid'

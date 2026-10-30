@@ -71,8 +71,8 @@ h5,
     text-align: right;
 }
 
-#halo-image-banner-template--19396943118580__image_banner_cwnjQq .item .banner-text,
-#halo-image-banner-template--19396943118580__image_banner_mUejpe .item .banner-text{
+:where([id^="halo-image-banner-"][id$="__image_banner_cwnjQq"]):not(#\#) .item .banner-text,
+:where([id^="halo-image-banner-"][id$="__image_banner_mUejpe"]):not(#\#) .item .banner-text{
  font-family: "Avenir Arabic", sans-serif !important;
 }
 .slide-heading .top, 
@@ -88,10 +88,10 @@ h5,
     text-align: right;
 }
 .rich-text__blocks h2, .slide-content .slide-heading, 
-#halo-image-banner-template--19396941644020__16474839872eb210cf .item .banner-text {
+:where([id^="halo-image-banner-"][id$="__16474839872eb210cf"]):not(#\#) .item .banner-text {
         font-family: "Avenir Arabic" !important;
 }
-#halo-image-banner-template--19396943118580__image_banner_cwnjQq .banner-button {
+:where([id^="halo-image-banner-"][id$="__image_banner_cwnjQq"]):not(#\#) .banner-button {
     padding-left: 55px;
     padding-right: 20px;
 }
@@ -159,26 +159,26 @@ li.list-social__item:last-child {
 
 /**Begin btn flipping**/
 .productView-groupTop .product-form__submit,
-.product-infinite-scroll .button, #halo-image-banner-template--19396943118580__image_banner_mUejpe .banner-button,
+.product-infinite-scroll .button, :where([id^="halo-image-banner-"][id$="__image_banner_mUejpe"]):not(#\#) .banner-button,
 .contact-support-btn,
 .slideshow .slide-content .slide-button, 
-.banner-button.button, .section-block-template--19396943118580__product_block_nEDnQ8 .product-infinite-scroll .button,
+.banner-button.button, :where([class*="section-block-template--"])[class*="__product_block_nEDnQ8"] .product-infinite-scroll .button,
 .contact-support-btn, .product-infinite-scroll .button,
-#custom-map-template--19396941873396__google-map .map-btn, 
-#ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn{
+:where(body.template-page-template-contact-us-2 [id^="custom-map-"][id$="__google-map"]):not(#\#) .map-btn, 
+:where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn{
     padding-inline-start: 30px!important;
     padding-inline-end: 50px!important;
 }
 
 .slide-button:after, .banner-button:after, .productView-groupTop .product-form__submit:after,
-.section-block-template--19396943118580__product_block_nEDnQ8 .product-infinite-scroll .button:after,
-#custom-map-template--19396941873396__google-map .map-btn:after, #ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn:after {
+:where([class*="section-block-template--"])[class*="__product_block_nEDnQ8"] .product-infinite-scroll .button:after,
+:where(body.template-page-template-contact-us-2 [id^="custom-map-"][id$="__google-map"]):not(#\#) .map-btn:after, :where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn:after {
     inset-inline-end: 28px;
     inset-inline-start: auto !important;
 }
 /**End btn flipping**/
 .banner-button.button,
-#ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn {
+:where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn {
 
     text-align: right;
 }
@@ -192,16 +192,16 @@ li.list-social__item:last-child {
 /* Desktop-only inset for the FAQ heading. Under 767px it stacked with the container
    padding below and left the heading visibly off-centre. */
 @media (min-width: 768px) {
-    .section-block-template--19396943118580__faqs_RfB3pw .halo-block-header.text-left .text,
-    .section-block-template--19396941644020__faqs_7F3bQ4 .halo-block-header.text-left .text {
+    :where([class*="section-block-template--"])[class*="__faqs_RfB3pw"] .halo-block-header.text-left .text,
+    :where([class*="section-block-template--"])[class*="__faqs_7F3bQ4"] .halo-block-header.text-left .text {
         padding-left: 5rem!important;
         padding-right: 0!important;
     }
 }
-#halo-image-banner-template--19396943118580__image_banner_N4xP8B .banner-button {
+:where([id^="halo-image-banner-"][id$="__image_banner_N4xP8B"]):not(#\#) .banner-button {
     max-width: max-content!important;
 }
-#ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn:hover:after, .banner-button.button:hover:after{
+:where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn:hover:after, .banner-button.button:hover:after{
         filter: brightness(0) invert(1);
 }
 .custom-service-block.service_block_style_3 .policies-content {
@@ -219,7 +219,7 @@ font-weight: 600;
 .halo-banner-wrapper .item--smallImg .flex-box__banner.row-reverse .banner-content {
     margin-right: 0;
 }
-#halo-image-banner-template--19396943118580__image_banner_mUejpe .banner-button {
+:where([id^="halo-image-banner-"][id$="__image_banner_mUejpe"]):not(#\#) .banner-button {
     width: 150px;
 }
 .contact-text-content {
@@ -230,7 +230,7 @@ font-weight: 600;
    id selector (1,1,0) plus !important used to win there too, leaving 20px on the left
    against 100px on the right — the whole FAQ block sat off-centre on Arabic mobile. */
 @media (min-width: 768px) {
-    #shopify-section-template--19396943118580__faqs_RfB3pw .faq-container {
+    :where([id^="shopify-section-"][id$="__faqs_RfB3pw"]):not(#\#) .faq-container {
         padding-right: 100px!important;
     }
 }
@@ -242,7 +242,7 @@ font-weight: 600;
     text-align: right;
 }
 
-#shopify-section-template--19396941644020__main .about-content-wrapper h1 {
+:where(body.template-page-template-about-us-2 [id^="shopify-section-"][id$="__main"]):not(#\#) .about-content-wrapper h1 {
     padding-left: 0;
     padding-right: 100px;
 }
@@ -269,7 +269,7 @@ font-weight: 600;
 .form-label, .field__label{
     text-align: right;
 }
-  .ai-banner-title-aajazafvwcu5wbnr2daigenblockdfb8083urbx48,
+  :where([class*="ai-banner-title-"])[class*="aigenblockdfb8083urbx48"],
   .productView-details .product-form__input .form__label, 
   .previewCartTotals .previewCartTotals-label ,
   .cart-note .form-input {
@@ -278,7 +278,7 @@ font-weight: 600;
     .list-social__item {
     margin: 0 0 6px 15px;
 }
-    #ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn{
+    :where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn{
         margin-right: 0;
     }
     .productView-quantity label {
@@ -336,7 +336,7 @@ font-weight: 600;
 .footer-1 .list-social__item {
     margin-left: 0;
 }
-#shopify-section-template--19396941644020__main .about-content-wrapper h1 {
+:where(body.template-page-template-about-us-2 [id^="shopify-section-"][id$="__main"]):not(#\#) .about-content-wrapper h1 {
    padding-right: 100px;
     padding-left: 0;
 }
@@ -544,8 +544,8 @@ input[type="checkbox"][required] {
     text-align: right !important;
 }
 
-#shopify-section-template--19396941250804__main p,
-#shopify-section-template--19396941250804__main li {
+:where(body.template-page:not([class*="template-page-"]) [id^="shopify-section-"][id$="__main"]):not(#\#) p,
+:where(body.template-page:not([class*="template-page-"]) [id^="shopify-section-"][id$="__main"]):not(#\#) li {
     color: #000 !important;
     font-family: "Gilroy Light";
 }
@@ -556,9 +556,9 @@ input[type="checkbox"][required] {
     padding-left: 60px !important;
 }
 
-#shopify-section-template--19396941250804__main b,
-#shopify-section-template--19396941250804__main span,
-#shopify-section-template--19396941250804__main a {
+:where(body.template-page:not([class*="template-page-"]) [id^="shopify-section-"][id$="__main"]):not(#\#) b,
+:where(body.template-page:not([class*="template-page-"]) [id^="shopify-section-"][id$="__main"]):not(#\#) span,
+:where(body.template-page:not([class*="template-page-"]) [id^="shopify-section-"][id$="__main"]):not(#\#) a {
     font-family: "Gilroy Extra Bold";
     color: #005339 !important;
 }

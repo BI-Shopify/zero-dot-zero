@@ -121,14 +121,49 @@
     if bg_mobile != blank
         assign aspect_mobile = 1 | divided_by: bg_mobile.aspect_ratio | times: 100
     endif
+
+    # "Match the home page slideshow height": the home hero has no height of its own, it
+    # is as tall as its first slide's desktop image at full width. Read that same image
+    # here and reuse its proportions (including slide-show.liquid's 110% rule for an
+    # off-centre focal point), so the two stay equal even when the home slide is replaced.
+    assign full_desktop = section.settings.full_image_desktop
+    if use_fixed_height and section.settings.match_home_height
+        assign home_slides = shop.metafields.custom.homepage_content.value.blocks.value | sort: 'order'
+        for home_slide in home_slides
+            if home_slide.system.type == 'slide_show' and home_slide.image_desktop.value != blank
+                assign home_image = home_slide.image_desktop.value
+                assign home_scale = 100
+                unless home_image.presentation.focal_point == '50.0% 50.0%'
+                    assign home_scale = 110
+                endunless
+                assign aspect_desktop = 1 | divided_by: home_image.aspect_ratio | times: home_scale
+                assign full_desktop = true
+                break
+            endif
+        endfor
+    endif
 -%}
 
+{%- comment -%}
+  Outer spacing, matching the home page slideshow: space above/below from tablet up and at
+  the sides on desktop, none on mobile. It lives on a wrapper because the banner's image
+  and overlay are pinned to the banner's own edges and would cover any padding put on it.
+{%- endcomment -%}
 <div
-    class="brand-banner {% if use_fixed_height %}brand-banner--fixed{% else %}brand-banner--natural{% endif %} section-block-{{ section.id }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--fade-in{% endif %}"
+    class="brand-banner-wrap"
+    style="
+        --brand-banner-wrap-bg: {{ section.settings.wrap_background }};
+        --brand-banner-wrap-padding-y: {{ section.settings.wrap_padding_vertical }}px;
+        --brand-banner-wrap-padding-x: {{ section.settings.wrap_padding_horizontal }}px;
+    "
+>
+<div
+    class="brand-banner {% if use_fixed_height %}brand-banner--fixed{% if full_desktop %} brand-banner--full-desktop{% endif %}{% else %}brand-banner--natural{% endif %} section-block-{{ section.id }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--fade-in{% endif %}"
     id="{% if meta_banner.block_id != blank %}{{ meta_banner.block_id }}{% else %}brand-banner-{{ section.id }}{% endif %}"{% if meta_banner.block_id != blank %} data-block-id="{{ meta_banner.block_id | escape }}"{% endif %}
     style="
         --brand-banner-height: {{ section.settings.height_desktop }}px;
         --brand-banner-height-mb: {{ section.settings.height_mobile }}px;
+        --brand-banner-bg-position: center {{ section.settings.image_position_desktop }};
         --brand-banner-aspect: {{ aspect_desktop }}%;
         --brand-banner-aspect-mb: {{ aspect_mobile }}%;
         --brand-banner-overlay-bg: {{ overlay_background }};
@@ -186,6 +221,7 @@
             {%- endif -%}
         </div>
     </div>
+</div>
 </div>
 
 {% schema %}
@@ -279,6 +315,55 @@
         },
         { "type": "range", "id": "height_desktop", "label": "Height (desktop, used when fixed height is on)", "min": 300, "max": 900, "step": 10, "unit": "px", "default": 560 },
         { "type": "range", "id": "height_mobile", "label": "Height (mobile, used when fixed height is on)", "min": 300, "max": 800, "step": 10, "unit": "px", "default": 520 },
+        {
+            "type": "checkbox",
+            "id": "full_image_desktop",
+            "label": "Show the full image on desktop",
+            "info": "On: the desktop banner ignores the desktop height above and takes the height of the image itself, so nothing is cropped. Mobile keeps its fixed height. To get a shorter desktop banner with this on, upload a wider, shorter image.",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "match_home_height",
+            "label": "Match the home page slideshow height (desktop)",
+            "info": "On: the desktop banner takes the same proportions as the first home page slide, so both banners are the same height. The image fills that shape and is cropped if its own proportions differ - use the image position below to choose which part stays. Overrides the two height options above on desktop.",
+            "default": false
+        },
+        {
+            "type": "select",
+            "id": "image_position_desktop",
+            "label": "Image position (desktop, used when fixed height is on)",
+            "info": "When the banner is shorter than the image, this decides which part of the image stays visible and which part is cropped.",
+            "default": "center",
+            "options": [
+                { "value": "top", "label": "Top (crop the bottom)" },
+                { "value": "center", "label": "Center (crop top and bottom equally)" },
+                { "value": "bottom", "label": "Bottom (crop the top)" }
+            ]
+        },
+        {
+            "type": "range",
+            "id": "wrap_padding_vertical",
+            "label": "Space above and below the banner (tablet and desktop)",
+            "info": "Same as the home page slideshow's top/bottom spacing. Not applied on mobile.",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "wrap_padding_horizontal",
+            "label": "Space at the sides of the banner (desktop)",
+            "info": "Same as the home page slideshow's full-width padding. Applied from 1025px up.",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        { "type": "color", "id": "wrap_background", "label": "Color behind the banner (shows in the space above)", "default": "#fff7e5" },
         {
             "type": "range",
             "id": "content_shift_up",

@@ -3,13 +3,13 @@
     margin-left: 30px;
 }
 
-#halo-image-banner-template--19396943118580__image_banner_cwnjQq .banner-button {
+:where([id^="halo-image-banner-"][id$="__image_banner_cwnjQq"]):not(#\#) .banner-button {
  width: auto !important;
     max-width: max-content !important;
     padding-right: 55px;
 }
 
-#halo-image-banner-template--19396943118580__image_banner_cwnjQq{
+:where([id^="halo-image-banner-"][id$="__image_banner_cwnjQq"]):not(#\#){
     margin-top: 0;    
     background-size: 50%!important;
     background-repeat: no-repeat!important;
@@ -24,7 +24,7 @@
     height: 40px;
 } 
 .contact-support-btn, 
- .button--secondary, .ai-banner-button-aajazafvwcu5wbnr2daigenblockdfb8083urbx48{
+ .button--secondary, :where([class*="ai-banner-button-"])[class*="aigenblockdfb8083urbx48"]{
     position: relative;
     border-radius: 30px;
     padding-inline-start: 25px !important;
@@ -32,7 +32,7 @@
 }
 .contact-support-btn:after,
  .button--secondary:after, 
- .ai-banner-button-aajazafvwcu5wbnr2daigenblockdfb8083urbx48:after {
+ :where([class*="ai-banner-button-"])[class*="aigenblockdfb8083urbx48"]:after {
     content: "";
     background-image: url(/cdn/shop/files/button-icon.svg?v=1746020835);
     background-repeat: no-repeat;
@@ -43,16 +43,16 @@
     width: 14px;
     height: 17px;
 }
- .ai-banner-button-aajazafvwcu5wbnr2daigenblockdfb8083urbx48:after{
+ :where([class*="ai-banner-button-"])[class*="aigenblockdfb8083urbx48"]:after{
         filter: brightness(0) invert(1);
  }
-  .ai-banner-button-aajazafvwcu5wbnr2daigenblockdfb8083urbx48:hover:after{
+  :where([class*="ai-banner-button-"])[class*="aigenblockdfb8083urbx48"]:hover:after{
         filter: none;
  }
 .contact-support-btn:hover:after,
-#halo-image-banner-template--19396943118580__image_banner_cwnjQq .banner-button:hover:after,
+:where([id^="halo-image-banner-"][id$="__image_banner_cwnjQq"]):not(#\#) .banner-button:hover:after,
  .button--secondary:hover:after,
- #halo-image-banner-template--19396943118580__image_banner_N4xP8B .banner-button:hover:after {
+ :where([id^="halo-image-banner-"][id$="__image_banner_N4xP8B"]):not(#\#) .banner-button:hover:after {
     filter: brightness(0) invert(1);
 }
 .faqs .faqs-item .card-header .title {
@@ -62,18 +62,18 @@
     gap: 0!important;
     width: 100%;
 }
-#FaqsSection-template--19396941971700__main .faqs-row{
+:where(body.template-page-template-faqs [id^="FaqsSection-"][id$="__main"]):not(#\#) .faqs-row{
     width: 100%!important;
 }
-#ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn {
+:where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn {
     padding-left: 35px !important;
     margin-bottom: 30px;
     text-align: left;
 }
- #ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn:after{
+ :where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn:after{
     filter: brightness(0) invert(1);
  }
-  #ContactSection-template--19396941873396__main .contact-item.contact-itemRight .contact-btn:hover:after,
+  :where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .contact-item.contact-itemRight .contact-btn:hover:after,
   .banner-button.button:hover:after{
     filter: none;
  }
@@ -106,7 +106,7 @@
 .productView-details .product-form__input .select__select {
     box-shadow: none;
 }
-    .section-block-template--19396943118580__slide_show_6CHbXC {
+    :where([class*="section-block-template--"])[class*="__slide_show_6CHbXC"] {
         padding-top: 50px!important;
     }
     .productView-quantity label {
@@ -121,11 +121,11 @@
 .template-index {
     background-color: #FFF7E5;
 }
-.section-block-template--19396943118580__faqs_RfB3pw{
+:where([class*="section-block-template--"])[class*="__faqs_RfB3pw"]{
     background-color: #FFF;
 }
-#shopify-section-template--19396941644020__main .about-content-wrapper h1,
-#ContactSection-template--19396941873396__main .image-container .page-header {
+:where(body.template-page-template-about-us-2 [id^="shopify-section-"][id$="__main"]):not(#\#) .about-content-wrapper h1,
+:where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .image-container .page-header {
     font-size: 60px;
     margin-bottom: 30px;
     text-transform: capitalize;
@@ -161,8 +161,8 @@
 .productView-details .product-form__input .form__label{
     font-size: 16px;
 }
-#halo-image-banner-template--19396941644020__16473179044a870c08,
-#shopify-section-template--19396941644020__1647339296880bf6ed .halo-banner.image-banner {
+:where([id^="halo-image-banner-"][id$="__16473179044a870c08"]):not(#\#),
+:where([id^="shopify-section-"][id$="__1647339296880bf6ed"]):not(#\#) .halo-banner.image-banner {
     margin-top: 0;
 }
 /* .style-arrows-9.product-card-layout-08 .wrapper-body {
@@ -171,26 +171,26 @@
 .template-cart  .cart-content-wrapper {
     padding-bottom: 50px;
 }
-.ai-banner-title-aajazafvwcu5wbnr2daigenblockdfb8083urbx48{
+:where([class*="ai-banner-title-"])[class*="aigenblockdfb8083urbx48"]{
     color: #FFF;
     text-align: left;
     width: 80%;
 }
-.ai-banner-content-aajazafvwcu5wbnr2daigenblockdfb8083urbx48 {
+:where([class*="ai-banner-content-"])[class*="aigenblockdfb8083urbx48"] {
     display: flex;
     height: 100%;
     align-items: start;
     flex-direction: column;
     justify-content: end;
 }
-.ai-banner-button-aajazafvwcu5wbnr2daigenblockdfb8083urbx48 {
+:where([class*="ai-banner-button-"])[class*="aigenblockdfb8083urbx48"] {
     background-color: #005339!important;
     border-radius: 30px!important;
     border: 0px solid #005339!important;
     text-transform: none;
     padding-right: 50px!important;
 }
-.ai-banner-button-aajazafvwcu5wbnr2daigenblockdfb8083urbx48:hover{
+:where([class*="ai-banner-button-"])[class*="aigenblockdfb8083urbx48"]:hover{
     color: #005339!important;
      background-color: #fff!important;
 }
@@ -210,23 +210,23 @@
     .fluid-width-video-wrapper{
         min-height: 300px;
     }
-    #shopify-section-template--19396941644020__main .about-content-wrapper h1,
-    #ContactSection-template--19396941873396__main .image-container .page-header {
+    :where(body.template-page-template-about-us-2 [id^="shopify-section-"][id$="__main"]):not(#\#) .about-content-wrapper h1,
+    :where(body.template-page-template-contact-us-2 [id^="ContactSection-"][id$="__main"]):not(#\#) .image-container .page-header {
     padding-left: 20px!important;
     font-size: 40px;
 }
- #halo-image-banner-template--19396941644020__16474839872eb210cf  .halo-block-content .halo-banner-wrapper {
+ :where([id^="halo-image-banner-"][id$="__16474839872eb210cf"]):not(#\#)  .halo-block-content .halo-banner-wrapper {
         padding-left: 0;
         padding-right: 0;
     }
-    #halo-image-banner-template--19396941644020__16473179044a870c08 .halo-banner-wrapper {
+    :where([id^="halo-image-banner-"][id$="__16473179044a870c08"]):not(#\#) .halo-banner-wrapper {
         padding-left: 0;
         padding-right: 0;
     }
     .contact.contact-2 .contact-main-title {
     font-size: 20px;
 }
-    #halo-image-banner-template--19396941644020__1647339296880bf6ed .halo-banner-wrapper {
+    :where([id^="halo-image-banner-"][id$="__1647339296880bf6ed"]):not(#\#) .halo-banner-wrapper {
         padding-left: 0;
         padding-right: 0;
     }
@@ -246,8 +246,8 @@
         .sections-image-banner-block .halo-banner-wrapper .flex-box__banner .content-box{
             padding: 20px 0;
         }
-        #halo-image-banner-template--19396943118580__image_banner_mUejpe .container-full ,
-        #CartSection-template--19396943020276__main .cart-container.container-full {
+        :where([id^="halo-image-banner-"][id$="__image_banner_mUejpe"]):not(#\#) .container-full ,
+        :where([id^="CartSection-"][id$="__main"]):not(#\#) .cart-container.container-full {
             padding-left: 15px!important;
             padding-right: 15px!important;
         }
@@ -258,10 +258,10 @@
             padding-left: 30px;
             padding-right: 30px;
         }*/
-        #shopify-section-template--19396943118580__image_banner_N4xP8B .halo-banner-wrapper .image {
+        :where([id^="shopify-section-"][id$="__image_banner_N4xP8B"]):not(#\#) .halo-banner-wrapper .image {
             display: none;
         }
-        #shopify-section-template--19396943118580__image_banner_N4xP8B .halo-banner-wrapper {
+        :where([id^="shopify-section-"][id$="__image_banner_N4xP8B"]):not(#\#) .halo-banner-wrapper {
             padding-left: 30px!important;
             padding-right: 30px!important;
         }
@@ -279,10 +279,10 @@
         bottom: 40px!important;
     }
     .quantity_selector,
-    .section-block-template--19396940988660__product-recently-viewed{
+    :where(body.template-product:not([class*="template-product-"]) [class*="section-block-template--"])[class*="__product-recently-viewed"]{
         margin-bottom: 30px;
     }
-        #CollectionSection-template--19396942495988__product-grid {
+        :where(body.template-collection:not([class*="template-collection-"]) [id^="CollectionSection-"][id$="__product-grid"]):not(#\#) {
         padding-top: 0!important;
     }
     .breadcrumb-bg .breadcrumb-container {
@@ -373,6 +373,23 @@
    ============================================================ */
 
 /* --- Brand Banner --- */
+.brand-banner-wrap {
+    background: var(--brand-banner-wrap-bg, transparent);
+    /* Divider under the header, same line the home page slideshow has. */
+    border-top: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+    .brand-banner-wrap {
+        padding-top: var(--brand-banner-wrap-padding-y, 0px);
+        padding-bottom: var(--brand-banner-wrap-padding-y, 0px);
+    }
+}
+@media (min-width: 1025px) {
+    .brand-banner-wrap {
+        padding-left: var(--brand-banner-wrap-padding-x, 0px);
+        padding-right: var(--brand-banner-wrap-padding-x, 0px);
+    }
+}
 .brand-banner {
     position: relative;
     overflow: hidden;
@@ -404,6 +421,35 @@
 }
 .brand-banner__bg {
     object-fit: cover;
+}
+@media (min-width: 768px) {
+    .brand-banner--fixed .brand-banner__bg {
+        object-position: var(--brand-banner-bg-position, center center);
+    }
+    /* "Show the full image on desktop": same layout as --natural, desktop only, so the
+       mobile banner keeps its fixed height. */
+    .brand-banner--fixed.brand-banner--full-desktop {
+        height: auto;
+    }
+    .brand-banner--full-desktop .brand-banner__media {
+        position: relative;
+        inset: auto;
+        height: auto;
+        padding-top: var(--brand-banner-aspect, 56.25%);
+    }
+    /* Doubled class on purpose: the base ".brand-banner .container" rule sits further down
+       this file with the same weight and would otherwise put the container back in flow,
+       side by side with the image. */
+    .brand-banner--fixed.brand-banner--full-desktop .container,
+    .brand-banner--fixed.brand-banner--full-desktop .container-full,
+    .brand-banner--fixed.brand-banner--full-desktop .container-1170,
+    .brand-banner--fixed.brand-banner--full-desktop .container-1470,
+    .brand-banner--fixed.brand-banner--full-desktop .container-1770 {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+    }
 }
 .brand-banner__overlay {
     background: var(--brand-banner-overlay-bg, transparent);
@@ -499,6 +545,10 @@
     }
     .brand-banner__logo {
         width: var(--brand-banner-logo-width-mb, 140px);
+        /* Lifts the logo only: the extra bottom margin cancels the negative top one,
+           so the content block keeps its height and the text below does not move. */
+        margin-top: -40px;
+        margin-bottom: 64px;
     }
     .brand-banner__content {
         margin-bottom: var(--brand-banner-content-shift-mb, 0px);
@@ -551,8 +601,8 @@
 }
 .brand-feature-stats__value {
     color: var(--brand-feature-stats-value-color, inherit);
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.2;
 }
 .brand-feature-stats__label {
@@ -560,14 +610,13 @@
     padding-top: 4px;
     color: var(--brand-feature-stats-label-color, inherit);
     font-size: 13px;
+    font-weight: 500;
     line-height: 1.3;
 }
 @media (max-width: 767px) {
-    /* No overlap on mobile, so the card would otherwise sit flush under the banner.
-       This matches the gap the next section's padding-top leaves below the card, so
-       the cream band reads as even above and below. */
+    /* No overlap on mobile, so the card would otherwise sit flush under the banner. */
     .brand-feature-stats {
-        padding-top: 60px;
+        padding: 15px 0px 15px;
     }
     .brand-feature-stats__card {
         margin-top: calc(var(--brand-feature-stats-overlap-mb, 0px) * -1);
@@ -577,6 +626,42 @@
     .brand-feature-stats__item {
         flex: 0 0 45%;
         width: 45%;
+    }
+}
+
+/* --- Brand Listing Heading --- */
+.brand-listing-heading {
+    padding-top: var(--brand-listing-heading-padding-top, 60px);
+    padding-bottom: var(--brand-listing-heading-padding-bottom, 0px);
+    background: var(--brand-listing-heading-bg, transparent);
+}
+.brand-listing-heading--center {
+    text-align: center;
+}
+.brand-listing-heading__title {
+    margin: 0;
+    color: var(--brand-listing-heading-color, var(--color-text, #005339));
+    font-size: var(--brand-listing-heading-size, 32px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+.brand-listing-heading__subtitle {
+    margin-top: 10px;
+    color: var(--brand-listing-subheading-color, var(--color-text, #005339));
+    font-size: var(--brand-listing-subheading-size, 18px);
+    font-weight: 500;
+    line-height: 1.4;
+}
+@media (max-width: 767px) {
+    .brand-listing-heading {
+        padding-top: var(--brand-listing-heading-padding-top-mb, 30px);
+        padding-bottom: var(--brand-listing-heading-padding-bottom-mb, 0px);
+    }
+    .brand-listing-heading__title {
+        font-size: var(--brand-listing-heading-size-mb, 22px);
+    }
+    .brand-listing-heading__subtitle {
+        font-size: var(--brand-listing-subheading-size-mb, 15px);
     }
 }
 
@@ -709,6 +794,11 @@ html[lang^="ar"] .brand-banner__button:hover .brand-banner__button-arrow,
     transform: scaleX(-1) translateX(4px);
 }
 @media (max-width: 767px) {
+    /* Falls back to the desktop value, so a page that never set the mobile ones is unchanged. */
+    .brand-learn-cards {
+        padding-top: var(--brand-learn-cards-padding-top-mb, var(--brand-learn-cards-padding-top, 60px));
+        padding-bottom: var(--brand-learn-cards-padding-bottom-mb, var(--brand-learn-cards-padding-bottom, 60px));
+    }
     .brand-learn-cards__grid {
         grid-template-columns: repeat(var(--brand-learn-cards-columns-mobile, 1), 1fr);
         gap: var(--brand-learn-cards-gap-mobile, 16px);
@@ -782,4 +872,18 @@ html:has(body.template-collection-brand) {
 }
 .brand-slider .slick-track .halo-item > .wrapper-content {
     width: 100%;
+}
+
+/* --- Footer payment icons, Arabic ---
+   The theme spaces the icons with margin-right and removes it from the last one, which
+   is right for left-to-right. In Arabic the row runs right-to-left, so margin-right is
+   the gap to the previous icon: the last icon needs it back, and the first (now at the
+   outer edge) is the one that should lose it. */
+html[lang^="ar"] .footer-block__list-payment ul li.list-payment__item:last-child,
+[dir="rtl"] .footer-block__list-payment ul li.list-payment__item:last-child {
+    margin-right: 13px;
+}
+html[lang^="ar"] .footer-block__list-payment ul li.list-payment__item:first-child,
+[dir="rtl"] .footer-block__list-payment ul li.list-payment__item:first-child {
+    margin-right: 0;
 }

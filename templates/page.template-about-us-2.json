@@ -131,7 +131,7 @@
         "ea48fb40-c5bc-4536-a283-4b32a72b4649"
       ],
       "custom_css": [
-        ".halo-banner.image-banner,#halo-image-banner-template--19396941644020__16474839872eb210cf .item--smallImg-st3 .flex-box__banner::after,.halo-banner-wrapper .flex-box__banner {background: transparent !important;}"
+        ".halo-banner.image-banner,:where([id^=\"halo-image-banner-\"][id$=\"__16474839872eb210cf\"]):not(#\\#) .item--smallImg-st3 .flex-box__banner::after,.halo-banner-wrapper .flex-box__banner {background: transparent !important;}"
       ],
       "settings": {
         "use_metaobject_background": true,

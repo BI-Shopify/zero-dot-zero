@@ -13,9 +13,9 @@
       "type": "custom-brand-banner",
       "settings": {
         "use_metaobject_content": true,
-        "enable_overlay": false,
-        "overlay_opacity": 0,
-        "overlay_color": "#000000",
+        "enable_overlay": true,
+        "overlay_opacity": 20,
+        "overlay_color": "#FFFFFF",
         "overlay_gradient": "",
         "logo_width": 200,
         "logo_width_mobile": 140,
@@ -36,6 +36,12 @@
         "use_fixed_height": true,
         "height_desktop": 510,
         "height_mobile": 380,
+        "full_image_desktop": true,
+        "match_home_height": true,
+        "wrap_padding_vertical": 20,
+        "wrap_padding_horizontal": 20,
+        "wrap_background": "#fef7ec",
+        "image_position_desktop": "top",
         "content_shift_up": 60,
         "content_shift_up_mobile": 0
       }
@@ -52,8 +58,8 @@
         "overlap_desktop": 120,
         "overlap_mobile": 0,
         "item_gap": 40,
-        "value_color": "#0b2545",
-        "label_color": "#0b2545"
+        "value_color": "#263576",
+        "label_color": "#263576"
       }
     },
     "learn_cards": {
@@ -80,7 +86,29 @@
         "button_text_color_hover": "#ffffff",
         "button_bg_color_hover": "#00312d",
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 60,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "listing_heading": {
+      "type": "custom-brand-listing-heading",
+      "settings": {
+        "heading": "The Perfect Size for Every Moment",
+        "subheading": "Discover our range",
+        "content_align": "center",
+        "heading_color": "",
+        "subheading_color": "",
+        "heading_size": 32,
+        "heading_size_mobile": 22,
+        "subheading_size": 18,
+        "subheading_size_mobile": 15,
+        "background_color": "rgba(0,0,0,0)",
+        "container": "container",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 0
       }
     },
     "product-grid": {
@@ -208,9 +236,9 @@
         "product_space_between_vert_mb": 16,
         "product_space_between_horiz_desk": 60,
         "product_space_between_horiz_mb": 30,
-        "mg_top_desktop": 100,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 50,
+        "mg_top_desktop": 40,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 25,
         "mg_bottom_desktop": 40,
         "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 0
@@ -275,6 +303,7 @@
     "brand_banner",
     "feature_stats",
     "learn_cards",
+    "listing_heading",
     "product-grid",
     "product-recently-viewed"
   ]
